@@ -32,4 +32,7 @@ export default defineNuxtConfig({
           ]
         : ["@juggle/resize-observer"],
   },
+  nitro: {
+    preset: "netlify",
+  },
 });

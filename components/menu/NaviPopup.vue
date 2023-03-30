@@ -16,8 +16,6 @@
 <script setup lang="ts">
 import {
   NIcon,
-  NSpace,
-  NText,
   NPopover,
   NButton,
   NCard,

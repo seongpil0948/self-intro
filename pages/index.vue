@@ -1,7 +1,7 @@
 <template>
   <n-space vertical>
     <div>home page</div>
-    <canvas ref="experience" />
+    <canvas ref="canvasEl" />
   </n-space>
 </template>
 
@@ -15,7 +15,7 @@ import {
   MeshBasicMaterial,
 } from "three";
 import { NSpace } from "naive-ui";
-const experience = ref<HTMLCanvasElement | null>(null);
+const canvasEl = ref<HTMLCanvasElement | null>(null);
 
 onMounted(() => {
   const scene = new Scene();
@@ -34,7 +34,7 @@ onMounted(() => {
   scene.add(sphere);
   camera.position.z = 5;
   const renderer = new WebGLRenderer({
-    canvas: experience.value as HTMLCanvasElement,
+    canvas: canvasEl.value as HTMLCanvasElement,
     antialias: true,
   });
   renderer.setSize(window.innerWidth, window.innerHeight);

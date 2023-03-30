@@ -1,3 +1,5 @@
+import Components from "unplugin-vue-components/vite";
+import { NaiveUiResolver } from "unplugin-vue-components/resolvers";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   typescript: {
@@ -14,6 +16,19 @@ export default defineNuxtConfig({
           ? ["naive-ui", "vueuc", "date-fns-tz/esm/formatInTimeZone"]
           : [],
     },
+    ssr: {
+      noExternal: [
+        "moment",
+        "naive-ui",
+        "@juggle/resize-observer",
+        "@css-render/vue3-ssr",
+      ],
+    },
+    plugins: [
+      Components({
+        resolvers: [NaiveUiResolver()], // Automatically register all components in the `components` directory
+      }),
+    ],
   },
   router: {
     // https://router.vuejs.org/api/interfaces/routeroptions.html

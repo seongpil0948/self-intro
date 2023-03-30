@@ -18,7 +18,8 @@
     "date-fns": "^2.29.3",
     "firebase": "^9.18.0",
     "naive-ui": "^2.34.3",
-    "nuxt": "^3.3.2"
+    "nuxt": "^3.3.2",
+    "unplugin-vue-components": "^0.24.1"
   },
   "dependencies": {
     "three": "^0.150.1"

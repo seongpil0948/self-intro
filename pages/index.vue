@@ -1,8 +1,8 @@
 <template>
-  <n-space vertical>
+  <v-container>
     <div>home page</div>
     <canvas ref="canvasEl" />
-  </n-space>
+  </v-container>
 </template>
 
 <script setup lang="ts">
@@ -14,7 +14,6 @@ import {
   SphereGeometry,
   MeshBasicMaterial,
 } from "three";
-import { NSpace } from "naive-ui";
 const canvasEl = ref<HTMLCanvasElement | null>(null);
 
 onMounted(() => {

@@ -1,64 +1,49 @@
 <template>
-  <n-popover trigger="click" :show-arrow="false" raw>
-    <template #trigger>
-      <n-button quaternary circle>
-        <template #icon>
-          <n-icon><AppsOutline /></n-icon>
-        </template>
-      </n-button>
+  <v-menu v-model="menu" :close-on-content-click="false" location="end">
+    <template v-slot:activator="{ props }">
+      <v-btn
+        style="position: absolute; right: 0"
+        v-bind="props"
+        icon="mdi-apps"
+      />
     </template>
-    <n-card content-style="width: 20vw; padding: 0">
-      <n-menu :indent="18" :options="menuOptions" />
-    </n-card>
-  </n-popover>
+
+    <v-card min-width="300">
+      <v-list>
+        <v-list-item
+          v-for="[icon, path, title, subTitle] in links"
+          :key="path"
+          :to="path"
+          link
+          active-color="primary"
+          rounded="shaped"
+          :title="title"
+          :subtitle="subTitle"
+        >
+          <template v-slot:prepend>
+            <v-icon class="ma-2" color="indigo" :icon="icon"></v-icon>
+          </template>
+        </v-list-item>
+      </v-list>
+
+      <v-divider></v-divider>
+
+      <v-card-actions>
+        <v-spacer></v-spacer>
+        <v-btn color="primary" variant="text" @click="() => (menu = false)">
+          더보기
+        </v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-menu>
 </template>
 
 <script setup lang="ts">
-import {
-  NIcon,
-  NPopover,
-  NButton,
-  NCard,
-  NMenu,
-  type MenuOption,
-} from "naive-ui";
-import { AppsOutline } from "@vicons/ionicons5";
-import { BuildingShop20Regular, AccessTime24Regular } from "@vicons/fluent";
-import { Gitlab, UserAstronaut } from "@vicons/fa";
-import type { VNodeChild } from "vue";
-
-const renderIcon = (icon: Component) => () =>
-  h(
-    NIcon,
-    {
-      size: 28,
-    },
-    { default: () => h(icon) }
-  );
-const renderMenu = (path: string, icon: Component, label: VNodeChild) => ({
-  label: () =>
-    h(
-      NButton,
-      {
-        bordered: false,
-        style: {
-          minWidth: "100px",
-          width: "100%",
-          height: "100%",
-        },
-        onClick: () => {
-          navigateTo(path);
-        },
-      },
-      { default: () => label }
-    ),
-  key: path,
-  icon: renderIcon(icon),
-});
-const menuOptions: MenuOption[] = [
-  renderMenu("/", UserAstronaut, "to home"),
-  renderMenu("/project/list", Gitlab, "projects"),
-  renderMenu("/design/list", BuildingShop20Regular, "designs"),
-  renderMenu("/inquiry", AccessTime24Regular, "inquiry"),
+const menu = ref(false);
+const links = [
+  ["mdi-home", "/", "home", "go to root"],
+  ["mdi-shield-account", "/project/list", "projects", "project list"],
+  ["mdi-store", "/design/list", "designs", "design list"],
+  ["mdi-emoticon-kiss", "/inquiry", "inquiry", "call me~"],
 ];
 </script>

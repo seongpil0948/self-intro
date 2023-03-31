@@ -1,11 +1,8 @@
 <template>
-  <n-space vertical>
+  <v-container fluid>
     <MenuNaviPopup />
-    pc layout
     <slot />
-  </n-space>
+  </v-container>
 </template>
 
-<script setup lang="ts">
-import { NSpace } from "naive-ui";
-</script>
+<script setup lang="ts"></script>

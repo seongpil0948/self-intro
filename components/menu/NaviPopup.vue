@@ -2,7 +2,7 @@
   <v-menu v-model="menu" :close-on-content-click="false" location="end">
     <template v-slot:activator="{ props }">
       <v-btn
-        style="position: absolute; right: 0"
+        style="position: absolute; right: 10px; top: 10px; z-index: 99999"
         v-bind="props"
         icon="mdi-apps"
       />
@@ -42,6 +42,7 @@
 const menu = ref(false);
 const links = [
   ["mdi-home", "/", "home", "go to root"],
+  ["mdi-meditation", "/about", "about", "about me"],
   ["mdi-shield-account", "/project/list", "projects", "project list"],
   ["mdi-store", "/design/list", "designs", "design list"],
   ["mdi-emoticon-kiss", "/inquiry", "inquiry", "call me~"],

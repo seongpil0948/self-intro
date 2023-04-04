@@ -1,8 +1,8 @@
 <template>
-  <v-container fluid>
+  <div>
     <MenuNaviPopup />
     <slot />
-  </v-container>
+  </div>
 </template>
 
 <script setup lang="ts"></script>

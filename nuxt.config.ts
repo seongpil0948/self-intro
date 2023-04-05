@@ -25,6 +25,6 @@ export default defineNuxtConfig({
     transpile: ["vuetify"],
   },
   nitro: {
-    preset: "netlify",
+    preset: "netlify-edge",
   },
 });

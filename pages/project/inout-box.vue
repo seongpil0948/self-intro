@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <h1 class="text-h1 text-left">
-      Inout box <span class="text-subtitle-2 my-2">2022-06 ~ ing</span>
+      Inout box <span class="text-subtitle-2 my-2">2022-06 ~ 2023-04</span>
     </h1>
     <!-- 사용된 도구 -->
     <v-row style="width: 70%">
@@ -9,10 +9,9 @@
         v-for="(t, idx1) in [
           'firebase',
           'typescript',
-          'flutter',
-          'go-lang',
           'google-cloud',
           'vue-js',
+          'go-lang',
           'gin-go',
         ]"
         :key="idx1"
@@ -37,7 +36,6 @@
           'Payment gateway(PG)',
           'Elastic search(도매상품/유저 검색)',
           '도매 POS 재고관리 시스템',
-          '사입자 출/퇴근 관리(APP)',
         ]"
         :key="idx1"
         color="pink"

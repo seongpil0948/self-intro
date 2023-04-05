@@ -9,11 +9,10 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@editorjs/editorjs": "^2.26.5",
     "@mdi/font": "^7.2.96",
     "date-fns": "^2.29.3",
-    "nuxt": "^3.3.2",
+    "nuxt": "^3.3.3",
     "sass": "^1.60.0",
-    "vuetify": "^3.1.12"
+    "vuetify": "^3.1.13"
   }
 }

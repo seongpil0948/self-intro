@@ -104,6 +104,7 @@ const langs = ["Go", "Dart", "Javascript", "Typescript", "Python"];
 const frames = ["Vue", "Flutter", "Gin", "Kubernetes", "Django", "Fast-api"];
 const services = [
   "Google-cloud",
+  "Elastic-search",
   "Firebase",
   "AWS",
   "Netlify",

@@ -25,6 +25,10 @@ export default defineNuxtConfig({
     transpile: ["vuetify"],
   },
   nitro: {
-    preset: "netlify-edge",
+    preset: "firebase",
+    replace: {
+      [`functions.https.onRequest`]: `functions.region('asia-northeast3').https.onRequest`,
+      [`functions.http.onRequest`]: `functions.region('asia-northeast3').http.onRequest`,
+    },
   },
 });

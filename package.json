@@ -11,6 +11,9 @@
   "devDependencies": {
     "@mdi/font": "^7.2.96",
     "date-fns": "^2.29.3",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.2.1",
+    "firebase-functions-test": "^3.0.0",
     "nuxt": "^3.3.3",
     "sass": "^1.60.0",
     "vuetify": "^3.1.13"

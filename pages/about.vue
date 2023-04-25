@@ -65,6 +65,31 @@
               디자인툴에 능통한 개발자 분들에 대한 막연한 존경으로부터,
               최근(2023.04) Blender 툴을 다루기 시작했습니다.
             </div>
+            <div class="text-body-1 my-2">
+              - 기 구축된 (Python, ELK, RabbitMq)데이터 파이프라인 ETL을 통해
+              관리되는 <br />
+              QA(Vue) 페이지에 대한 유지보수/기능개발 업무를 담당한 경험이
+              있습니다.
+            </div>
+            <div class="text-body-1 my-2">
+              - 옷 도매 플랫폼, 캠핑 플랫폼 하이브리드 웹(Nuxt, Vue) 앱(Flutter)
+              로서 출시(Firebase)한 경험이 있습니다. <br />
+              주요기능: 검색엔진(Elastic search), 푸시알림, 프로필 사진(사진
+              크기 편집), 영수증 출력, PG사 도입, POS기능
+            </div>
+            <div class="text-body-1 my-2">
+              - 이전 회사에(패션 AI)서 각종 국가과제, 회사 홈페이지에 대한 웹
+              사이트 구축을 담당한 경험이 있습니다.
+            </div>
+            <div class="text-body-1 my-2">
+              - 이전 회사에서 CJ, Lotte의 외주를 받아 크롤러를 제작, ELK-Argo로
+              ETL to 외주처DB 워크플로우 파이프라인 구축 경험이 있습니다.
+            </div>
+            <div class="text-body-1 my-2">
+              현재 주요 목표 <br />
+              - 타원 곡선에 대한 수학적 이해 ( 기초 부족 ) <br />
+              - Flutter Animation, 3D 모델링 숙달
+            </div>
           </v-container>
         </v-window-item>
         <v-window-item value="en">

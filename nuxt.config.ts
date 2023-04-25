@@ -26,9 +26,11 @@ export default defineNuxtConfig({
   },
   nitro: {
     preset: "firebase",
-    replace: {
-      [`functions.https.onRequest`]: `functions.region('asia-northeast3').https.onRequest`,
-      [`functions.http.onRequest`]: `functions.region('asia-northeast3').http.onRequest`,
-    },
+    replace: import.meta.env.PROD
+      ? {
+          [`functions.https.onRequest`]: `functions.region('asia-northeast3').https.onRequest`,
+          [`functions.http.onRequest`]: `functions.region('asia-northeast3').http.onRequest`,
+        }
+      : undefined,
   },
 });

@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid class="my-2">
     <h1 class="text-h1 text-left">
       Inout uncle <span class="text-subtitle-2 my-2">2023-01 ~ 2023-04</span>
     </h1>

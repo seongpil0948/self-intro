@@ -4,7 +4,7 @@
       Inout box <span class="text-subtitle-2 my-2">2022-06 ~ 2023-04</span>
     </h1>
     <!-- 사용된 도구 -->
-    <v-row style="width: 70%">
+    <v-row style="width: 70%" class="my-3">
       <v-col
         v-for="(t, idx1) in [
           'firebase',
